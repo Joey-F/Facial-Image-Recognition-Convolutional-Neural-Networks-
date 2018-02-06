@@ -160,17 +160,20 @@ model <- mx.model.FeedForward.create(NN_model,
 
 # Predict labels
 predicted <- predict(model, test_array)
+
 # Assign labels
 predicted_labels <- max.col(t(predicted)) - 1
+
 # Get accuracy
 sum(diag(table(test[, 1], predicted_labels)))/40
 
-################################################################################
-#                           OUTPUT
-################################################################################
-#
-# 0.975
-#
+
+###
+### Output
+###
+
+# 0.975 accuracy
+
 
 
 
